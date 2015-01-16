@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="com.snipmetv.saveimages"
+    version="0.1.0">
+    <name>MyPlugin</name>   
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="SaveImages">
+                <param name="ios-package" value="SaveImages" /> 
+            </feature>
+        </config-file>
+        <js-module src="www/SaveImages.js" name="SaveImages">
+            <clobbers target="saveimages" />
+        </js-module>
+        <header-file src="src/ios/SaveImages.h" />
+	    <source-file src="src/ios/SaveImages.m" />
+    </platform>
+</plugin>
